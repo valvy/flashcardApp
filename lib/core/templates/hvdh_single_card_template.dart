@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:heiko_flashcard/core/style/AppSizes.dart';
+import 'package:heiko_flashcard/core/style/app_sizes.dart';
 
-class HSCardTemplate extends StatelessWidget {
+class HvdhCardTemplate extends StatelessWidget {
   final String title;
   final StatelessWidget root;
 
-  const HSCardTemplate({
+  const HvdhCardTemplate({
       super.key,
       this.title = "",
-      required StatelessWidget this.root
+      required this.root
   });
 
   @override
@@ -16,7 +16,7 @@ class HSCardTemplate extends StatelessWidget {
     return Scaffold(
       appBar:AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(this.title),
+          title: Text(title),
           ),
       body: SingleChildScrollView (
         child: Align(
@@ -24,7 +24,7 @@ class HSCardTemplate extends StatelessWidget {
           child: Padding(
           padding: const EdgeInsets.all(AppSizes.r_16),
           child: Container(
-            constraints: BoxConstraints(
+            constraints: const BoxConstraints(
               minHeight: 100, //minimum height
               minWidth: 300, // minimum width
               maxHeight: 400,
@@ -32,7 +32,7 @@ class HSCardTemplate extends StatelessWidget {
               maxWidth: 500,
             ),
             child: Column(
-              children: [this.root],
+              children: [root],
             ),
           ),
         ),

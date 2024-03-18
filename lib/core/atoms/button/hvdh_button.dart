@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class HSButton extends TextButton {
+class HvdhButton extends TextButton {
 
-  HSButton({
+  HvdhButton({
     super.key,
     required String text,
     required VoidCallback onPressed,
@@ -11,7 +11,7 @@ class HSButton extends TextButton {
     child: Text(text),
   );
 
-  HSButton.error({
+  HvdhButton.error({
     super.key,
     required String text,
     required VoidCallback onPressed,
@@ -20,11 +20,13 @@ class HSButton extends TextButton {
       foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
       overlayColor: MaterialStateProperty.resolveWith<Color?>(
             (Set<MaterialState> states) {
-          if (states.contains(MaterialState.hovered))
+          if (states.contains(MaterialState.hovered)) {
             return Colors.blue.withOpacity(0.04);
+          }
           if (states.contains(MaterialState.focused) ||
-              states.contains(MaterialState.pressed))
+              states.contains(MaterialState.pressed)) {
             return Colors.blue.withOpacity(0.12);
+          }
           return null; // Defer to the widget's default.
         },
       ),

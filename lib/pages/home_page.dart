@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -10,9 +12,9 @@ class HomePage extends StatelessWidget {
             .of(context)
             .colorScheme
             .inversePrimary,
-        title: Text("homepage"),
+        title: const Text("homepage"),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Text("test"),
       ),
     );

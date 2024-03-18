@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:heiko_flashcard/core/style/AppSizes.dart';
+import 'package:heiko_flashcard/core/style/app_sizes.dart';
 
-class HSTextField extends TextField {
+class HvdhTextField extends TextField {
 
-  HSTextField.rounded({
+  HvdhTextField.rounded({
     super.key,
     String hintText = "",
     super.keyboardType = TextInputType.text,

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:heiko_flashcard/core/style/AppSizes.dart';
-import 'package:heiko_flashcard/core/atoms/input/HSTextField.dart';
+import 'package:heiko_flashcard/core/style/app_sizes.dart';
+import 'package:heiko_flashcard/core/atoms/input/hvdh_text_field.dart';
 
-class HSSignInInput extends StatelessWidget {
+class HvdhSignInInput extends StatelessWidget {
   final String emailText;
   final String passwordText;
 
   final String emailTextFieldHint;
   final String passwordTextFieldHint;
 
-  const HSSignInInput({
+  const HvdhSignInInput({
     super.key,
     required this.emailText,
     required this.passwordText,
@@ -27,7 +27,7 @@ class HSSignInInput extends StatelessWidget {
           alignment: Alignment.centerLeft,
           child: Text(emailText),
         ),
-        HSTextField.rounded(
+        HvdhTextField.rounded(
           hintText: emailTextFieldHint,
           keyboardType: TextInputType.emailAddress,
         ),
@@ -37,7 +37,7 @@ class HSSignInInput extends StatelessWidget {
           child: Text(passwordText),
         ),
         const SizedBox(height: AppSizes.h_12),
-        HSTextField.rounded(
+        HvdhTextField.rounded(
           hintText: passwordTextFieldHint,
           keyboardType: TextInputType.number,
           isPassword: true,

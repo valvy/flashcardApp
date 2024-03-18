@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:heiko_flashcard/core/atoms/input/HSTextField.dart';
-import 'package:heiko_flashcard/core/molecules/HSSignInInput.dart';
-import 'package:heiko_flashcard/core/organism/HSSignInCard.dart';
-import 'package:heiko_flashcard/core/templates/HSSingleCardTemplate.dart';
-import 'package:heiko_flashcard/pages/HomePage.dart';
+import 'package:heiko_flashcard/core/organism/hvdh_sign_in_card.dart';
+import 'package:heiko_flashcard/core/templates/hvdh_single_card_template.dart';
+import 'package:heiko_flashcard/pages/home_page.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -18,9 +16,9 @@ class _MyLoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return HSCardTemplate(
+    return HvdhCardTemplate(
       title: "Login",
-        root: HSSignInCard(
+        root: HvdhSignInCard(
           emailText: "email",
           emailTextFieldHint: "typ hier je mail",
           passwordText: "wachtwoord",
@@ -30,7 +28,7 @@ class _MyLoginPageState extends State<LoginPage> {
           onLoginPressed: () {},
           onRegisterPressed: (){
             Navigator.pushReplacement(context, MaterialPageRoute(
-              builder: (context) =>  HomePage(),
+              builder: (context) =>  const HomePage(),
             ));
           },
         )

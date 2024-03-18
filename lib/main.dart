@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:heiko_flashcard/pages/HomePage.dart';
-import 'package:heiko_flashcard/pages/LoginPage.dart';
+import 'package:heiko_flashcard/pages/login_page.dart';
 
 
 
-import 'pages/LoginPage.dart';
 
 void main() {
   runApp(const MyApp());
