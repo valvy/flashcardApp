@@ -18,10 +18,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flashcard app',
-      routes: {
-        '/home': (context) => HomePage(),
-        '/login': (context) => LoginPage()
-      },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

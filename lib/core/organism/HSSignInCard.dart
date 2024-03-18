@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:heiko_flashcard/style/AppSizes.dart';
-import 'package:heiko_flashcard/molecules/HSSignInInput.dart';
-import 'package:heiko_flashcard/atoms/button/HSButton.dart';
+import 'package:heiko_flashcard/core/style/AppSizes.dart';
+import 'package:heiko_flashcard/core/molecules/HSSignInInput.dart';
+import 'package:heiko_flashcard/core/atoms/button/HSButton.dart';
 
 class HSSignInCard extends StatelessWidget {
 

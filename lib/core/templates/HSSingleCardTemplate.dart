@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:heiko_flashcard/style/AppSizes.dart';
+import 'package:heiko_flashcard/core/style/AppSizes.dart';
 
 class HSCardTemplate extends StatelessWidget {
   final String title;

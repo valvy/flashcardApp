@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:heiko_flashcard/atoms/input/HSTextField.dart';
-import 'package:heiko_flashcard/molecules/HSSignInInput.dart';
-import 'package:heiko_flashcard/organism/HSSignInCard.dart';
-import 'package:heiko_flashcard/templates/HSSingleCardTemplate.dart';
+import 'package:heiko_flashcard/core/atoms/input/HSTextField.dart';
+import 'package:heiko_flashcard/core/molecules/HSSignInInput.dart';
+import 'package:heiko_flashcard/core/organism/HSSignInCard.dart';
+import 'package:heiko_flashcard/core/templates/HSSingleCardTemplate.dart';
 import 'package:heiko_flashcard/pages/HomePage.dart';
 
 
@@ -29,7 +29,9 @@ class _MyLoginPageState extends State<LoginPage> {
           loginButton: "login",
           onLoginPressed: () {},
           onRegisterPressed: (){
-            Navigator.pushNamed(context, "/home");
+            Navigator.pushReplacement(context, MaterialPageRoute(
+              builder: (context) =>  HomePage(),
+            ));
           },
         )
     );
