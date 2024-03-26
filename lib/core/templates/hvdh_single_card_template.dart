@@ -25,8 +25,8 @@ class HvdhCardTemplate extends StatelessWidget {
           padding: const EdgeInsets.all(AppSizes.r_16),
           child: Container(
             constraints: const BoxConstraints(
-              minHeight: 100, //minimum height
-              minWidth: 300, // minimum width
+              minHeight: 100,
+              minWidth: 300,
               maxHeight: 400,
               //maximum height set to 100% of vertical height
               maxWidth: 500,

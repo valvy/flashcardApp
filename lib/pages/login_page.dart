@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:heiko_flashcard/core/organism/hvdh_sign_in_card.dart';
 import 'package:heiko_flashcard/core/templates/hvdh_single_card_template.dart';
 import 'package:heiko_flashcard/pages/home_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:heiko_flashcard/pages/register_page.dart';
+import 'package:heiko_flashcard/services/auth_service.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -12,7 +15,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _MyLoginPageState extends State<LoginPage> {
-
+  final AuthService _authService = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +28,16 @@ class _MyLoginPageState extends State<LoginPage> {
           passwordTextHint: "Typ hier je wachtwoord",
           registerButton: "registreer",
           loginButton: "login",
-          onLoginPressed: () {},
-          onRegisterPressed: (){
+          onLoginPressed: () {
             Navigator.pushReplacement(context, MaterialPageRoute(
-              builder: (context) =>  const HomePage(),
+              builder: (context) =>
+                  HomePage(),
+            ));
+          },
+          onRegisterPressed: (){
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) =>
+                  RegisterPage(),
             ));
           },
         )
