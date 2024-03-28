@@ -5,40 +5,35 @@ class HvdhCardTemplate extends StatelessWidget {
   final String title;
   final StatelessWidget root;
 
-  const HvdhCardTemplate({
-      super.key,
-      this.title = "",
-      required this.root
-  });
+  const HvdhCardTemplate({super.key, this.title = "", required this.root});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(title),
-          ),
-      body: SingleChildScrollView (
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(title),
+      ),
+      body: SingleChildScrollView(
         child: Align(
-            alignment: Alignment.center,
+          alignment: Alignment.center,
           child: Padding(
-          padding: const EdgeInsets.all(AppSizes.r_16),
-          child: Container(
-            constraints: const BoxConstraints(
-              minHeight: 100,
-              minWidth: 300,
-              maxHeight: 400,
-              //maximum height set to 100% of vertical height
-              maxWidth: 500,
-            ),
-            child: Column(
-              children: [root],
+            padding: const EdgeInsets.all(AppSizes.r_16),
+            child: Container(
+              constraints: const BoxConstraints(
+                minHeight: 100,
+                minWidth: 300,
+                maxHeight: 400,
+                //maximum height set to 100% of vertical height
+                maxWidth: 500,
+              ),
+              child: Column(
+                children: [root],
+              ),
             ),
           ),
         ),
       ),
-      ),
     );
-
   }
 }

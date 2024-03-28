@@ -4,7 +4,6 @@ import 'package:heiko_flashcard/core/molecules/hvdh_sign_in_input.dart';
 import 'package:heiko_flashcard/core/atoms/button/hvdh_button.dart';
 
 class HvdhSignInCard extends StatelessWidget {
-
   final String emailText;
   final String emailTextFieldHint;
   final String passwordText;
@@ -12,6 +11,10 @@ class HvdhSignInCard extends StatelessWidget {
 
   final String registerButton;
   final String loginButton;
+
+  final TextEditingController emailController;
+
+  final TextEditingController passwordController;
 
   final VoidCallback onRegisterPressed;
   final VoidCallback onLoginPressed;
@@ -25,7 +28,9 @@ class HvdhSignInCard extends StatelessWidget {
     required this.registerButton,
     required this.loginButton,
     required this.onRegisterPressed,
-    required this.onLoginPressed
+    required this.onLoginPressed,
+    required this.emailController,
+    required this.passwordController,
   });
 
   @override
@@ -38,26 +43,22 @@ class HvdhSignInCard extends StatelessWidget {
             HvdhSignInInput(
               emailText: emailText,
               passwordText: passwordText,
-              emailTextFieldHint:  emailTextFieldHint,
+              emailTextFieldHint: emailTextFieldHint,
               passwordTextFieldHint: passwordTextHint,
+              emailController: emailController,
+              passwordController: passwordController,
             ),
             Align(
               alignment: Alignment.centerRight,
-              child: HvdhButton(
-                  text: loginButton,
-                  onPressed: onLoginPressed
-              ),
+              child: HvdhButton(text: loginButton, onPressed: onLoginPressed),
             ),
             Row(
               children: [
                 Expanded(
                   child: SizedBox(
-                    height: AppSizes.h_48,
-                    child: HvdhButton.error(
-                      onPressed: onRegisterPressed,
-                      text: registerButton
-                    )
-                  ),
+                      height: AppSizes.h_48,
+                      child: HvdhButton.error(
+                          onPressed: onRegisterPressed, text: registerButton)),
                 ),
               ],
             ),

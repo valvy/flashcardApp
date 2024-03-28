@@ -6,6 +6,10 @@ class HvdhSignInInput extends StatelessWidget {
   final String emailText;
   final String passwordText;
 
+  final TextEditingController emailController;
+
+  final TextEditingController passwordController;
+
   final String emailTextFieldHint;
   final String passwordTextFieldHint;
 
@@ -15,13 +19,14 @@ class HvdhSignInInput extends StatelessWidget {
     required this.passwordText,
     this.emailTextFieldHint = "",
     this.passwordTextFieldHint = "",
+    required this.emailController,
+    required this.passwordController,
   });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-
         const SizedBox(height: AppSizes.h_16),
         Align(
           alignment: Alignment.centerLeft,
@@ -30,6 +35,7 @@ class HvdhSignInInput extends StatelessWidget {
         HvdhTextField.rounded(
           hintText: emailTextFieldHint,
           keyboardType: TextInputType.emailAddress,
+          controller: emailController,
         ),
         const SizedBox(height: AppSizes.h_16),
         Align(
@@ -40,9 +46,9 @@ class HvdhSignInInput extends StatelessWidget {
         HvdhTextField.rounded(
           hintText: passwordTextFieldHint,
           keyboardType: TextInputType.number,
+          controller: passwordController,
           isPassword: true,
         ),
-
       ],
     );
   }
